@@ -6,6 +6,32 @@
   <title>Government — Great Thandoria</title>
   <link rel="icon" href="flag.png" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Quick inline styles to make tables readable if your CSS doesn't style them */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #222;
+      color: #fff;
+    }
+    details {
+      margin-bottom: 15px;
+    }
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 1.2em;
+      margin-bottom: 5px;
+    }
+  </style>
 </head>
 <body>
   <div id="site-header"></div>
@@ -13,95 +39,87 @@
   <main class="container">
     <section>
       <h2>Government</h2>
-      <p class="muted"><section>
-  <h2>Government</h2>
-  <p class="muted">Imperial structure: President, Imperial Assembly, Cabinet, Judiciary, and National Departments.</p>
+      <p class="muted">Imperial structure: President, Imperial Assembly, Cabinet, Judiciary, and National Departments.</p>
 
-  <!-- Executive Branch -->
-  <details open>
-    <summary>Executive Branch</summary>
-    <h3>President of Great Thandoria (POGT)</h3>
-    <p><em>Chief executive, commander-in-chief, sets national agenda</em></p>
+      <!-- Executive Branch -->
+      <details open>
+        <summary>Executive Branch</summary>
+        <h3>President of Great Thandoria (POGT)</h3>
+        <p><em>Chief executive, commander-in-chief, sets national agenda</em></p>
 
-    <h4>Cabinet (Secretaries)</h4>
-    <table>
-      <tr>
-        <th>Position</th>
-        <th>Office/Body</th>
-        <th>Details</th>
-      </tr>
-      <tr><td>Vice President (VPOGT)</td><td>Executive Branch</td><td>Leader of Imperial Assembly</td></tr>
-      <tr><td>Sec. of Defense (SECDEF)</td><td>Department of Defense</td><td>Oversees Defense Department, principal defense/war policy advisor.</td></tr>
-      <tr><td>Sec. of State (SECSTATE)</td><td>Department of State</td><td>Chief foreign affairs adviser, carries out President's foreign policies.</td></tr>
-      <tr><td>Sec. of Treasury</td><td>Department of Treasury</td><td>Maintains economy, fosters growth, manages government finances.</td></tr>
-      <tr><td>Sec. of Interior</td><td>Department of the Interior</td><td>Manages federal lands through agencies like National Park Service.</td></tr>
-      <tr><td>Sec. of Justice</td><td>Department of Justice</td><td>Represents the nation in legal matters, advises President and departments.</td></tr>
-      <tr><td>Sec. of Agriculture</td><td>Department of Agriculture</td><td>Directs policy and programs for food, farming, and rural development.</td></tr>
-      <tr><td>Sec. of Commerce</td><td>Department of Commerce</td><td>Principal advisor to President on commerce matters.</td></tr>
-      <tr><td>Sec. of Labor</td><td>Department of Labor</td><td>Advises President on labor policies, workplace conditions, wages, and rights.</td></tr>
-      <tr><td>Sec. of Health</td><td>Department of Health</td><td>Leads HHS, advises on health policy and programs.</td></tr>
-      <tr><td>Sec. of Transportation</td><td>Department of Transportation</td><td>Oversees national transportation policy and promotes intermodal transportation.</td></tr>
-      <tr><td>Sec. of Education</td><td>Department of Education</td><td>Leads federal education policy, advises President.</td></tr>
-      <tr><td>Sec. of Homeland Security</td><td>Department of Homeland Security</td><td>Oversees counter-terrorism, border security, immigration enforcement, and cybersecurity.</td></tr>
-      <tr><td>Chief of Staff</td><td>Executive Branch</td><td>Strategic advisor and executor for President, manages operations and liaison duties.</td></tr>
-    </table>
-  </details>
+        <h4>Cabinet (Secretaries)</h4>
+        <table>
+          <tr><th>Position</th><th>Office/Body</th><th>Details</th></tr>
+          <tr><td>Vice President (VPOGT)</td><td>Executive Branch</td><td>Leader of Imperial Assembly</td></tr>
+          <tr><td>Sec. of Defense (SECDEF)</td><td>Department of Defense</td><td>Oversees Defense Department, principal defense/war policy advisor.</td></tr>
+          <tr><td>Sec. of State (SECSTATE)</td><td>Department of State</td><td>Chief foreign affairs adviser, carries out President's foreign policies.</td></tr>
+          <tr><td>Sec. of Treasury</td><td>Department of Treasury</td><td>Maintains economy, fosters growth, manages government finances.</td></tr>
+          <tr><td>Sec. of Interior</td><td>Department of the Interior</td><td>Manages federal lands through agencies like National Park Service.</td></tr>
+          <tr><td>Sec. of Justice</td><td>Department of Justice</td><td>Represents the nation in legal matters, advises President and departments.</td></tr>
+          <tr><td>Sec. of Agriculture</td><td>Department of Agriculture</td><td>Directs policy and programs for food, farming, and rural development.</td></tr>
+          <tr><td>Sec. of Commerce</td><td>Department of Commerce</td><td>Principal advisor to President on commerce matters.</td></tr>
+          <tr><td>Sec. of Labor</td><td>Department of Labor</td><td>Advises President on labor policies, workplace conditions, wages, and rights.</td></tr>
+          <tr><td>Sec. of Health</td><td>Department of Health</td><td>Leads HHS, advises on health policy and programs.</td></tr>
+          <tr><td>Sec. of Transportation</td><td>Department of Transportation</td><td>Oversees national transportation policy and promotes intermodal transportation.</td></tr>
+          <tr><td>Sec. of Education</td><td>Department of Education</td><td>Leads federal education policy, advises President.</td></tr>
+          <tr><td>Sec. of Homeland Security</td><td>Department of Homeland Security</td><td>Oversees counter-terrorism, border security, immigration enforcement, and cybersecurity.</td></tr>
+          <tr><td>Chief of Staff</td><td>Executive Branch</td><td>Strategic advisor and executor for President, manages operations and liaison duties.</td></tr>
+        </table>
+      </details>
 
-  <!-- Legislative Branch -->
-  <details>
-    <summary>Legislative Branch</summary>
-    <h3>Imperial Assembly</h3>
-    <p><em>Unicameral legislature, 300 seats; passes laws, approves budget, oversees executive</em></p>
-    <table>
-      <tr><th>Position</th><th>Office/Body</th><th>Details</th></tr>
-      <tr><td>Speaker of the Assembly</td><td>Legislative Branch</td><td>Presides over Assembly, sets legislative agenda.</td></tr>
-      <tr><td>Majority Leader</td><td>Legislative Branch</td><td>Leads majority party, coordinates bills and voting.</td></tr>
-      <tr><td>Minority Leader</td><td>Legislative Branch</td><td>Leads minority party, provides checks and debate.</td></tr>
-      <tr><td>Committees</td><td>Legislative Branch</td><td>Specialized committees: Finance, Defense, Health, Education, etc.</td></tr>
-    </table>
-  </details>
+      <!-- Legislative Branch -->
+      <details>
+        <summary>Legislative Branch</summary>
+        <h3>Imperial Assembly</h3>
+        <p><em>Unicameral legislature, 300 seats; passes laws, approves budget, oversees executive</em></p>
+        <table>
+          <tr><th>Position</th><th>Office/Body</th><th>Details</th></tr>
+          <tr><td>Speaker of the Assembly</td><td>Legislative Branch</td><td>Presides over Assembly, sets legislative agenda.</td></tr>
+          <tr><td>Majority Leader</td><td>Legislative Branch</td><td>Leads majority party, coordinates bills and voting.</td></tr>
+          <tr><td>Minority Leader</td><td>Legislative Branch</td><td>Leads minority party, provides checks and debate.</td></tr>
+          <tr><td>Committees</td><td>Legislative Branch</td><td>Specialized committees: Finance, Defense, Health, Education, etc.</td></tr>
+        </table>
+      </details>
 
-  <!-- Judiciary Branch -->
-  <details>
-    <summary>Judiciary Branch</summary>
-    <h3>Supreme Tribunal of Thandoria</h3>
-    <p><em>Highest Court, interprets laws, ensures constitutionality, oversees lower courts</em></p>
-    <table>
-      <tr><th>Position</th><th>Office/Body</th><th>Details</th></tr>
-      <tr><td>Chief Justice</td><td>Judiciary</td><td>Leads Supreme Tribunal, oversees judicial decisions.</td></tr>
-      <tr><td>Associate Justices</td><td>Judiciary</td><td>Serve on Supreme Tribunal, hear cases and issue rulings.</td></tr>
-      <tr><td>Lower Courts</td><td>Judiciary</td><td>Regional and local courts handling daily judicial matters.</td></tr>
-    </table>
-  </details>
+      <!-- Judiciary Branch -->
+      <details>
+        <summary>Judiciary Branch</summary>
+        <h3>Supreme Tribunal of Thandoria</h3>
+        <p><em>Highest Court, interprets laws, ensures constitutionality, oversees lower courts</em></p>
+        <table>
+          <tr><th>Position</th><th>Office/Body</th><th>Details</th></tr>
+          <tr><td>Chief Justice</td><td>Judiciary</td><td>Leads Supreme Tribunal, oversees judicial decisions.</td></tr>
+          <tr><td>Associate Justices</td><td>Judiciary</td><td>Serve on Supreme Tribunal, hear cases and issue rulings.</td></tr>
+          <tr><td>Lower Courts</td><td>Judiciary</td><td>Regional and local courts handling daily judicial matters.</td></tr>
+        </table>
+      </details>
 
-  <!-- Bureaucracy / Agencies -->
-  <details>
-    <summary>Bureaucracy / Agencies</summary>
-    <h3>National Departments & Agencies</h3>
-    <p><em>Implement policies and programs; report to President or Cabinet</em></p>
-    <table>
-      <tr><th>Position</th><th>Office/Body</th><th>Details</th></tr>
-      <tr><td>Department of Defense</td><td>Agency</td><td>Provide military forces to deter war and ensure national security.</td></tr>
-      <tr><td>Department of State</td><td>Agency</td><td>Protect and promote security, prosperity, and democratic values internationally.</td></tr>
-      <tr><td>Department of Treasury</td><td>Agency</td><td>Maintain a strong economy and create job opportunities.</td></tr>
-      <tr><td>Department of the Interior</td><td>Agency</td><td>Protect and manage natural resources and cultural heritage.</td></tr>
-      <tr><td>Department of Justice</td><td>Agency</td><td>Uphold the rule of law, protect civil rights, and ensure safety.</td></tr>
-      <tr><td>Department of Agriculture</td><td>Agency</td><td>Support farmers, ensure food safety, and promote agriculture.</td></tr>
-      <tr><td>Department of Commerce</td><td>Agency</td><td>Create conditions for economic growth and opportunity.</td></tr>
-      <tr><td>Department of Labor</td><td>Agency</td><td>Promote welfare of workers, improve conditions, ensure rights.</td></tr>
-      <tr><td>Department of Health</td><td>Agency</td><td>Enhance health and well-being, oversee medical and public health services.</td></tr>
-      <tr><td>Department of Transportation</td><td>Agency</td><td>Manage federal transportation projects, safety regulations, and policy.</td></tr>
-      <tr><td>Department of Education</td><td>Agency</td><td>Promote student achievement, global competitiveness, and access to education.</td></tr>
-      <tr><td>Department of Homeland Security</td><td>Agency</td><td>Secure the nation, counter threats, manage borders, and ensure cybersecurity.</td></tr>
-    </table>
-  </details>
+      <!-- Bureaucracy / Agencies -->
+      <details>
+        <summary>Bureaucracy / Agencies</summary>
+        <h3>National Departments & Agencies</h3>
+        <p><em>Implement policies and programs; report to President or Cabinet</em></p>
+        <table>
+          <tr><th>Position</th><th>Office/Body</th><th>Details</th></tr>
+          <tr><td>Department of Defense</td><td>Agency</td><td>Provide military forces to deter war and ensure national security.</td></tr>
+          <tr><td>Department of State</td><td>Agency</td><td>Protect and promote security, prosperity, and democratic values internationally.</td></tr>
+          <tr><td>Department of Treasury</td><td>Agency</td><td>Maintain a strong economy and create job opportunities.</td></tr>
+          <tr><td>Department of the Interior</td><td>Agency</td><td>Protect and manage natural resources and cultural heritage.</td></tr>
+          <tr><td>Department of Justice</td><td>Agency</td><td>Uphold the rule of law, protect civil rights, and ensure safety.</td></tr>
+          <tr><td>Department of Agriculture</td><td>Agency</td><td>Support farmers, ensure food safety, and promote agriculture.</td></tr>
+          <tr><td>Department of Commerce</td><td>Agency</td><td>Create conditions for economic growth and opportunity.</td></tr>
+          <tr><td>Department of Labor</td><td>Agency</td><td>Promote welfare of workers, improve conditions, ensure rights.</td></tr>
+          <tr><td>Department of Health</td><td>Agency</td><td>Enhance health and well-being, oversee medical and public health services.</td></tr>
+          <tr><td>Department of Transportation</td><td>Agency</td><td>Manage federal transportation projects, safety regulations, and policy.</td></tr>
+          <tr><td>Department of Education</td><td>Agency</td><td>Promote student achievement, global competitiveness, and access to education.</td></tr>
+          <tr><td>Department of Homeland Security</td><td>Agency</td><td>Secure the nation, counter threats, manage borders, and ensure cybersecurity.</td></tr>
+        </table>
+      </details>
 
-  <p class="muted" style="margin-top:20px;">
-    "The will of the people is the foundation of all Thandorian power; no man shall rise above the Republic."<br>
-    — The Speaker of the Assembly (1952)
-  </p>
-</section>
-</p>
+      <p class="muted" style="margin-top:20px;">
+        "The will of the people is the foundation of all Thandorian power; no man shall rise above the Republic."<br>
+        — The Speaker of the Assembly (1952)
+      </p>
     </section>
   </main>
 
