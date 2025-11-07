@@ -7,16 +7,16 @@
   <link rel="icon" href="flag.png" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .container { max-width: 1000px; margin: auto; padding: 20px; }
-    h2, h3 { margin-top: 30px; }
-    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
-    table, th, td { border: 1px solid #aaa; }
-    th, td { padding: 8px; text-align: left; }
-    .muted { color: #666; }
-    .spoiler { background: #f9f9f9; padding: 10px; margin: 10px 0; border: 1px solid #ccc; cursor: pointer; }
-    .spoiler-content { display: none; margin-top: 10px; }
-    img { max-width: 100%; height: auto; }
-    .float-left { float: left; margin-right: 15px; margin-bottom: 10px; width: 200px; }
+    /* Additional page-specific styles */
+    .branch-section { margin-bottom: 2rem; }
+    .branch-section h3 { margin-top: 1rem; }
+    .asset-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    .asset-table th, .asset-table td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    .asset-table th { background-color: #f2f2f2; }
+    .spoiler { border: 1px solid #999; padding: 0.5rem; margin-top: 0.5rem; cursor: pointer; background: #f9f9f9; }
+    .spoiler-content { display: none; padding-top: 0.5rem; }
+    .spoiler:hover { background-color: #eee; }
+    img.asset-img { max-width: 300px; display: block; margin: 0.5rem 0; }
   </style>
 </head>
 <body>
@@ -24,158 +24,122 @@
 
   <main class="container">
     <section>
-      <h2>Thandorian Imperial Military</h2>
-      <p class="muted">(Detailed overview of the military structure, assets, and strategic capabilities of Great Thandoria.)</p>
+      <h2>Military of Great Thandoria</h2>
+      <p class="muted">Comprehensive overview of the Empire's armed forces, structure, doctrine, and assets.</p>
+    </section>
 
+    <!-- High Command -->
+    <section class="branch-section">
       <h3>High Command</h3>
       <ul>
-        <li><b>Supreme Commander of the Armed Forces:</b> General Maximilian Adler (Callsign: "Titan")</li>
-        <li><b>Chief of Staff of the Army:</b> General Sylvia Cross (Callsign: "Valor")</li>
+        <li><strong>Supreme Commander of the Armed Forces:</strong> General Maximilian Adler (Titan) — distinguished 4-star general with extensive combat and diplomatic experience.</li>
+        <li><strong>Chief of Staff of the Army:</strong> General Sylvia Cross (Valor) — expert in logistics and operational planning, modernized army tactics.</li>
       </ul>
+    </section>
 
-      <h3>Army Command Structure</h3>
+    <!-- Army Command -->
+    <section class="branch-section">
+      <h3>Imperial Army Command Structure</h3>
+
       <div class="spoiler">Northern Front Command
         <div class="spoiler-content">
           <ul>
-            <li>General Alan Frost (Callsign: "Blizzard") – Winter warfare specialist</li>
-            <li>Lieutenant General Marcus Hale (Callsign: "Ironclad") – Armored divisions</li>
-            <li>Lieutenant General Elisa Grant (Callsign: "Pioneer") – Infantry operations</li>
+            <li>General Alan Frost (Blizzard) — specialist in winter warfare and fortifications.</li>
+            <li>Lieutenant General Marcus Hale (Ironclad) — armored divisions.</li>
+            <li>Lieutenant General Elisa Grant (Pioneer) — infantry operations.</li>
           </ul>
         </div>
       </div>
+
       <div class="spoiler">Southern Front Command
         <div class="spoiler-content">
           <ul>
-            <li>General Nadia Reyes (Callsign: "Phoenix") – Summer operations</li>
-            <li>Lieutenant General Kael Mendez (Callsign: "Thunder") – Artillery units</li>
-            <li>Lieutenant General Lila Chen (Callsign: "Supply Chain") – Logistics</li>
+            <li>General Nadia Reyes (Phoenix) — expert in summer operations.</li>
+            <li>Lieutenant General Kael Mendez (Thunder) — artillery units.</li>
+            <li>Lieutenant General Lila Chen (Supply Chain) — logistics.</li>
           </ul>
         </div>
       </div>
-      <!-- Repeat similar structure for Central and Eastern Commands -->
 
-      <h3>Army Assets</h3>
-      <table>
+      <div class="spoiler">Central Command
+        <div class="spoiler-content">
+          <ul>
+            <li>General Viktor Steele (Bulwark) — national logistics, reserves, homeland defense.</li>
+            <li>Lieutenant General Tobias Grant (Sentry) — training and recruitment.</li>
+            <li>Lieutenant General Freya Carter (Forge) — domestic garrisons.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="spoiler">Eastern Command
+        <div class="spoiler-content">
+          <ul>
+            <li>General Helena Cross (Shadow) — mobility and border security.</li>
+            <li>Lieutenant General Cedric Blake (Thunderbolt) — cavalry and rapid-response.</li>
+            <li>Lieutenant General Astrid Lane (Wraith) — covert operations.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Assets -->
+    <section class="branch-section">
+      <h3>Imperial Army Assets</h3>
+      <table class="asset-table">
         <tr>
           <th>Asset</th>
           <th>Type</th>
-          <th>Active Quantity</th>
+          <th>Quantity</th>
           <th>Description</th>
         </tr>
         <tr>
           <td>Imperial Infantry</td>
           <td>Soldiers</td>
           <td>1.56 Million</td>
-          <td>Highly mobile, modernized force designed for overseas intervention and precision ground operations.</td>
+          <td>Highly mobile, modernized force for overseas interventions and precision ground operations.</td>
         </tr>
         <tr>
           <td>Abrams X "The Whispering Death"</td>
           <td>Main Battle Tank</td>
           <td>750</td>
-          <td>Next-generation Thandorian main battle tank, designed for superior performance.</td>
+          <td>Next-generation main battle tank with advanced armor and 120mm smoothbore cannon.</td>
         </tr>
         <tr>
           <td>PT-91 "Twardy"</td>
           <td>Main Battle Tank</td>
           <td>4,000</td>
-          <td>Enhanced armor and hybrid propulsion system, superior survivability.</td>
+          <td>Modernized tank with enhanced armor and hybrid propulsion system.</td>
         </tr>
-        <!-- Add remaining army assets here -->
+        <tr>
+          <td>M-109A7 "Paladin"</td>
+          <td>Self-Propelled Howitzer</td>
+          <td>1,200</td>
+          <td>Advanced artillery with precision strike capabilities.</td>
+        </tr>
+        <tr>
+          <td>UH-60 "Black Hawk"</td>
+          <td>Utility Helicopter</td>
+          <td>700</td>
+          <td>Versatile transport for troops and supplies.</td>
+        </tr>
+        <tr>
+          <td>RQ-4 Global Hawk</td>
+          <td>Recon Drone</td>
+          <td>500</td>
+          <td>Long-range, high-altitude surveillance drone.</td>
+        </tr>
       </table>
-
-      <h3>Air Force Assets</h3>
-      <table>
-        <tr>
-          <th>Asset</th>
-          <th>Type</th>
-          <th>Active Quantity</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>F-35 "Lightning II"</td>
-          <td>Stealth Fighter</td>
-          <td>250</td>
-          <td>Multi-role stealth fighter with advanced avionics.</td>
-        </tr>
-        <tr>
-          <td>B-2 "Spirit"</td>
-          <td>Strategic Bomber</td>
-          <td>70</td>
-          <td>Stealth bomber capable of delivering both conventional and nuclear payloads.</td>
-        </tr>
-        <!-- Add remaining air force assets here -->
-      </table>
-
-      <h3>Navy Assets</h3>
-      <table>
-        <tr>
-          <th>Asset</th>
-          <th>Type</th>
-          <th>Active Quantity</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>Arleigh Burke-class DDG</td>
-          <td>Destroyer</td>
-          <td>30</td>
-          <td>Advanced missile systems for anti-air and anti-ship roles.</td>
-        </tr>
-        <tr>
-          <td>Wasp-class LHD</td>
-          <td>Amphibious Assault Ship</td>
-          <td>8</td>
-          <td>Capacity for troop deployment directly onto beaches.</td>
-        </tr>
-        <!-- Add remaining navy assets here -->
-      </table>
-
-      <h3>Special Operations Forces</h3>
-      <ul>
-        <li>Ghost Team: Covert Operations</li>
-        <li>Shadow Legion: Counter-Terrorism</li>
-        <li>Phantom Corps: Maritime Operations</li>
-        <li>Titan Force: Heavy Assault</li>
-        <li>Recon Unit: Intelligence Gathering</li>
-      </ul>
-
-      <h3>Strategic Weapons Command</h3>
-      <ul>
-        <li>Commander: General Corvin Rausch (Callsign: "Overwatch")</li>
-        <li>Oversees nuclear, intercontinental, and strategic deterrence systems.</li>
-      </ul>
-      <table>
-        <tr>
-          <th>Asset</th>
-          <th>Type</th>
-          <th>Active Quantity</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>ICBM “Leviathan” Mk-IV</td>
-          <td>Intercontinental Ballistic Missile</td>
-          <td>120</td>
-          <td>Equipped with MIRVs, stealth reentry shielding, 12,000 km range.</td>
-        </tr>
-        <tr>
-          <td>SRBM “Falcon Strike”</td>
-          <td>Short-Range Ballistic Missile</td>
-          <td>650</td>
-          <td>Tactical nuclear and conventional strike capability.</td>
-        </tr>
-        <!-- Add remaining strategic weapons -->
-      </table>
-
     </section>
   </main>
 
   <div id="site-footer"></div>
 
   <script>
-    // Spoiler toggle script
-    document.querySelectorAll('.spoiler').forEach(spoiler => {
-      spoiler.addEventListener('click', () => {
-        const content = spoiler.querySelector('.spoiler-content');
-        if (content) content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    // Spoiler toggle functionality
+    document.querySelectorAll('.spoiler').forEach(item => {
+      item.addEventListener('click', () => {
+        const content = item.querySelector('.spoiler-content');
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
       });
     });
   </script>
