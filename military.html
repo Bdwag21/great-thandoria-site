@@ -6,55 +6,178 @@
   <title>Military — Great Thandoria</title>
   <link rel="icon" href="flag.png" />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .container { max-width: 1000px; margin: auto; padding: 20px; }
+    h2, h3 { margin-top: 30px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+    table, th, td { border: 1px solid #aaa; }
+    th, td { padding: 8px; text-align: left; }
+    .muted { color: #666; }
+    .spoiler { background: #f9f9f9; padding: 10px; margin: 10px 0; border: 1px solid #ccc; cursor: pointer; }
+    .spoiler-content { display: none; margin-top: 10px; }
+    img { max-width: 100%; height: auto; }
+    .float-left { float: left; margin-right: 15px; margin-bottom: 10px; width: 200px; }
+  </style>
 </head>
 <body>
   <div id="site-header"></div>
 
   <main class="container">
     <section>
-      <h1>Military of the Great Thandorian Empire</h1>
-      <p>
-        The Great Thandorian Empire maintains one of the most formidable, technologically advanced, and strategically organized militaries in the modern world.
-        Its mission is to safeguard the Empire’s sovereignty, protect its citizens, and uphold national interests both domestically and abroad.
-      </p>
-    </section>
+      <h2>Thandorian Imperial Military</h2>
+      <p class="muted">(Detailed overview of the military structure, assets, and strategic capabilities of Great Thandoria.)</p>
 
-    <section>
-      <h2>Branches of the Armed Forces</h2>
+      <h3>High Command</h3>
       <ul>
-        <li><strong>Imperial Army:</strong> The primary land-based force, known for rapid mechanized deployment and advanced combined-arms warfare.</li>
-        <li><strong>Imperial Navy:</strong> A global blue-water navy equipped with carriers, destroyers, and nuclear submarines for power projection.</li>
-        <li><strong>Imperial Air Force:</strong> Responsible for air superiority, strategic bombing, and aerial reconnaissance.</li>
-        <li><strong>Imperial Guard:</strong> Elite homeland defense and protection of imperial institutions and leadership.</li>
+        <li><b>Supreme Commander of the Armed Forces:</b> General Maximilian Adler (Callsign: "Titan")</li>
+        <li><b>Chief of Staff of the Army:</b> General Sylvia Cross (Callsign: "Valor")</li>
       </ul>
-    </section>
 
-    <section>
-      <h2>Imperial Navy Assets</h2>
+      <h3>Army Command Structure</h3>
+      <div class="spoiler">Northern Front Command
+        <div class="spoiler-content">
+          <ul>
+            <li>General Alan Frost (Callsign: "Blizzard") – Winter warfare specialist</li>
+            <li>Lieutenant General Marcus Hale (Callsign: "Ironclad") – Armored divisions</li>
+            <li>Lieutenant General Elisa Grant (Callsign: "Pioneer") – Infantry operations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="spoiler">Southern Front Command
+        <div class="spoiler-content">
+          <ul>
+            <li>General Nadia Reyes (Callsign: "Phoenix") – Summer operations</li>
+            <li>Lieutenant General Kael Mendez (Callsign: "Thunder") – Artillery units</li>
+            <li>Lieutenant General Lila Chen (Callsign: "Supply Chain") – Logistics</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Repeat similar structure for Central and Eastern Commands -->
+
+      <h3>Army Assets</h3>
+      <table>
+        <tr>
+          <th>Asset</th>
+          <th>Type</th>
+          <th>Active Quantity</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Imperial Infantry</td>
+          <td>Soldiers</td>
+          <td>1.56 Million</td>
+          <td>Highly mobile, modernized force designed for overseas intervention and precision ground operations.</td>
+        </tr>
+        <tr>
+          <td>Abrams X "The Whispering Death"</td>
+          <td>Main Battle Tank</td>
+          <td>750</td>
+          <td>Next-generation Thandorian main battle tank, designed for superior performance.</td>
+        </tr>
+        <tr>
+          <td>PT-91 "Twardy"</td>
+          <td>Main Battle Tank</td>
+          <td>4,000</td>
+          <td>Enhanced armor and hybrid propulsion system, superior survivability.</td>
+        </tr>
+        <!-- Add remaining army assets here -->
+      </table>
+
+      <h3>Air Force Assets</h3>
+      <table>
+        <tr>
+          <th>Asset</th>
+          <th>Type</th>
+          <th>Active Quantity</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>F-35 "Lightning II"</td>
+          <td>Stealth Fighter</td>
+          <td>250</td>
+          <td>Multi-role stealth fighter with advanced avionics.</td>
+        </tr>
+        <tr>
+          <td>B-2 "Spirit"</td>
+          <td>Strategic Bomber</td>
+          <td>70</td>
+          <td>Stealth bomber capable of delivering both conventional and nuclear payloads.</td>
+        </tr>
+        <!-- Add remaining air force assets here -->
+      </table>
+
+      <h3>Navy Assets</h3>
+      <table>
+        <tr>
+          <th>Asset</th>
+          <th>Type</th>
+          <th>Active Quantity</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>Arleigh Burke-class DDG</td>
+          <td>Destroyer</td>
+          <td>30</td>
+          <td>Advanced missile systems for anti-air and anti-ship roles.</td>
+        </tr>
+        <tr>
+          <td>Wasp-class LHD</td>
+          <td>Amphibious Assault Ship</td>
+          <td>8</td>
+          <td>Capacity for troop deployment directly onto beaches.</td>
+        </tr>
+        <!-- Add remaining navy assets here -->
+      </table>
+
+      <h3>Special Operations Forces</h3>
       <ul>
-        <li><strong>Aircraft Carriers:</strong> Invictus-class (2 active, 1 under construction)</li>
-        <li><strong>Destroyers:</strong> Tempest-class (12 active)</li>
-        <li><strong>Submarines:</strong> Astute-class SSN (6 active)</li>
+        <li>Ghost Team: Covert Operations</li>
+        <li>Shadow Legion: Counter-Terrorism</li>
+        <li>Phantom Corps: Maritime Operations</li>
+        <li>Titan Force: Heavy Assault</li>
+        <li>Recon Unit: Intelligence Gathering</li>
       </ul>
-    </section>
 
-    <section>
-      <h2>Modernization & Technology</h2>
-      <p>
-        The Imperial Military continues to evolve with AI-assisted command networks, unmanned systems, and cyber-warfare divisions.
-        Major modernization efforts focus on interoperability, automation, and real-time strategic awareness.
-      </p>
-    </section>
+      <h3>Strategic Weapons Command</h3>
+      <ul>
+        <li>Commander: General Corvin Rausch (Callsign: "Overwatch")</li>
+        <li>Oversees nuclear, intercontinental, and strategic deterrence systems.</li>
+      </ul>
+      <table>
+        <tr>
+          <th>Asset</th>
+          <th>Type</th>
+          <th>Active Quantity</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>ICBM “Leviathan” Mk-IV</td>
+          <td>Intercontinental Ballistic Missile</td>
+          <td>120</td>
+          <td>Equipped with MIRVs, stealth reentry shielding, 12,000 km range.</td>
+        </tr>
+        <tr>
+          <td>SRBM “Falcon Strike”</td>
+          <td>Short-Range Ballistic Missile</td>
+          <td>650</td>
+          <td>Tactical nuclear and conventional strike capability.</td>
+        </tr>
+        <!-- Add remaining strategic weapons -->
+      </table>
 
-    <section>
-      <h2>Global Presence</h2>
-      <p>
-        The Empire maintains a series of overseas installations and rapid response units across allied nations, ensuring readiness and deterrence in all strategic theaters.
-      </p>
     </section>
   </main>
 
   <div id="site-footer"></div>
-  <script src="js/main.js"></script>
+
+  <script>
+    // Spoiler toggle script
+    document.querySelectorAll('.spoiler').forEach(spoiler => {
+      spoiler.addEventListener('click', () => {
+        const content = spoiler.querySelector('.spoiler-content');
+        if (content) content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
 </body>
 </html>
