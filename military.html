@@ -4,445 +4,159 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Military — Great Thandoria</title>
-  <link rel="icon" href="flag.png" />
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem;
+    :root{
+      --accent:#0b3a66;
+      --muted:#6b7280;
+      --card-bg:#ffffff;
+      --panel-bg:#f7fafc;
+      --danger:#8b0000;
     }
-    h1, h2, h3 {
-      color: #1b1b1b;
-      border-bottom: 2px solid #d4d4d4;
-      padding-bottom: 0.4rem;
-      margin-top: 2rem;
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:#f2f4f7; color:#111;}
+    header, nav, footer{background:#1e1e1e; color:#fff;}
+    nav a{color:#fff; text-decoration:none; margin-right:15px; font-weight:bold;}
+    nav a:hover{text-decoration:underline;}
+    .container{max-width:1100px;margin:26px auto;padding:0 20px;}
+    h1,h2,h3{color:var(--accent); margin:0 0 10px 0;}
+    h1{font-size:32px;}
+    .lede{color:var(--muted);margin-bottom:18px;}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:20px;}
+    .card{background:var(--card-bg);border-radius:8px;padding:14px;box-shadow:0 6px 16px rgba(9,30,66,0.06);}
+    .card .role{font-weight:700;color:#0f1724}
+    .section{margin-bottom:26px;}
+    .section-title{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+    .section-title h2{margin:0;font-size:20px;}
+    .small-muted{color:var(--muted);font-size:13px;}
+    table.asset-table{width:100%;border-collapse:collapse;background:#fff;border-radius:6px;overflow:hidden;margin-bottom:18px;}
+    table.asset-table th, table.asset-table td{padding:10px;border-bottom:1px solid #eef2f7;text-align:left;font-size:14px;}
+    table.asset-table th{background:#0b3a66;color:#fff;font-weight:600;}
+    table.asset-table tr:last-child td{border-bottom:none;}
+    tr.striped:nth-child(even){background:#fbfdff;}
+    details{background:var(--panel-bg);padding:10px;border-radius:8px;margin-bottom:10px;border:1px solid #e6eef6}
+    summary{cursor:pointer;font-weight:700;color:var(--accent);outline:none;}
+    .stats{font-size:13px;color:#0f1724;margin-top:8px;}
+    .stats b{display:inline-block;width:140px}
+    .callout{background:#fff7ed;border-left:4px solid #f59e0b;padding:10px;border-radius:6px;margin:12px 0;color:#78350f}
+    .classified{background:#fff0f0;border-left:4px solid var(--danger);padding:12px;border-radius:6px;color:var(--danger)}
+    footer{margin-top:30px;padding:18px 0;text-align:center;color:var(--muted)}
+    @media (max-width:700px){
+      .stats b{width:120px}
     }
-    p {
-      line-height: 1.7;
-      color: #333;
-    }
-    .muted {
-      color: #777;
-      font-size: 0.95rem;
-    }
-    ul {
-      margin-left: 1.5rem;
-    }
-
-    /* Extras for military layout */
-    .call-sign { font-style: italic; color: #222; }
-    details { margin: .6rem 0 1rem; padding: .6rem; border: 1px solid #e2e2e2; border-radius: 6px; background:#fafafa; }
-    details[open] { background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
-    summary { font-weight: 700; cursor: pointer; margin-bottom: 0.4rem; }
-    table { width: 100%; border-collapse: collapse; margin: .6rem 0 1.2rem; }
-    th, td { border: 1px solid #e6e6e6; padding: .5rem .7rem; text-align: left; vertical-align: top; }
-    th { background: #f7f7f7; }
-    .float-left { float: left; margin-right: 14px; width: 210px; max-width: 40%; }
-    .asset-stats { font-size: .95rem; color: #333; margin-top: .4rem; }
-    .classified { background: #fff6f6; border-color: #ffd3d3; }
-    .note { font-size: .95rem; color: #5b5b5b; margin-top: 0.25rem; }
-    @media (max-width:600px) { .float-left { display:block; float:none; width:100%; margin:0 0 8px 0; } }
   </style>
 </head>
 <body>
-  <div id="site-header"></div>
+  <header>
+    <h1 style="padding:15px 20px;">Great Thandoria — Military Overview</h1>
+    <nav style="padding:10px 20px;">
+      <a href="#high-command">High Command</a>
+      <a href="#branch-commands">Branches</a>
+      <a href="#assets">Assets</a>
+      <a href="#strategic-weapons">Strategic Weapons</a>
+      <a href="#special-procure">Special Forces</a>
+    </nav>
+  </header>
 
   <main class="container">
-    <section>
-      <h1>The Imperial Military of Great Thandoria</h1>
-      <p class="muted">Organization, command, major assets, and special forces of the Thandorian Imperial Military.</p>
+    <header class="section">
+      <p class="lede">The Imperial Military safeguards Great Thandoria’s sovereignty, protects its citizens, and projects national power. Below is an authoritative overview of command structures, branch commands, major assets, strategic forces, and procurement.</p>
+    </header>
 
-      <h2>Thandorian Imperial Military Command Structure</h2>
+    <!-- HIGH COMMAND -->
+    <section class="section" id="high-command">
+      <div class="section-title"><h2>High Command</h2><span class="small-muted">Top leadership & strategic direction</span></div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="role">Supreme Commander of the Armed Forces</div>
+          <div><strong>General Maximilian Adler</strong> <span class="small-muted">(Callsign: "Titan")</span></div>
+          <p class="small-muted">A distinguished 4‑star general with extensive combat and diplomatic experience; responsible for strategic direction of all armed forces.</p>
+        </div>
+        <div class="card">
+          <div class="role">Chief of Staff, Army</div>
+          <div><strong>General Sylvia Cross</strong> <span class="small-muted">(Callsign: "Valor")</span></div>
+          <p class="small-muted">Renowned for logistical expertise and operational planning; led modernization of army tactics and force readiness efforts.</p>
+        </div>
+        <div class="card">
+          <div class="role">Commander, Strategic Operations</div>
+          <div><strong>General Corvin Rausch</strong> <span class="small-muted">(Callsign: "Overwatch")</span></div>
+          <p class="small-muted">Oversees nuclear, intercontinental, and strategic deterrence systems; reports directly to Supreme Commander for launch authorization.</p>
+        </div>
+      </div>
+    </section>
 
-      <h3>High Command</h3>
-      <ul>
-        <li><strong><em>Supreme Commander of the Armed Forces:</em></strong> General Maximilian Adler <span class="call-sign">("Titan")</span>
-          <div class="note">A distinguished 4‑star general with extensive combat and diplomatic experience.</div>
-        </li>
-        <li><strong><em>Chief of Staff of the Army:</em></strong> General Sylvia Cross <span class="call-sign">("Valor")</span>
-          <div class="note">Known for logistical expertise and operational planning; key in modernizing army tactics.</div>
-        </li>
-      </ul>
+    <!-- BRANCH COMMANDS -->
+    <section class="section" id="branch-commands">
+      <div class="section-title"><h2>Branch Command Structures</h2><span class="small-muted">Operational commands and theatre leadership</span></div>
 
-      <h3>Imperial Army Command Structure</h3>
-
-      <details>
-        <summary><strong>Northern Front Command</strong></summary>
-        <ul>
-          <li><strong><em>General Alan Frost</em></strong> <span class="call-sign">("Blizzard")</span> — specialist in winter warfare and fortifications.</li>
-          <li><em>Lieutenant General Marcus Hale</em> <span class="call-sign">("Ironclad")</span> — oversees armored divisions.</li>
-          <li><em>Lieutenant General Elisa Grant</em> <span class="call-sign">("Pioneer")</span> — commands infantry operations.</li>
-        </ul>
+      <details open>
+        <summary>Imperial Army Command Structure</summary>
+        <div class="card" style="margin-top:10px;">
+          <p class="small-muted">Four theater-level Army Commands manage frontline operations, reserves, training and garrison duties.</p>
+        </div>
       </details>
 
       <details>
-        <summary><strong>Southern Front Command</strong></summary>
-        <ul>
-          <li><strong><em>General Nadia Reyes</em></strong> <span class="call-sign">("Phoenix")</span> — expert in summer operations.</li>
-          <li><em>Lieutenant General Kael Mendez</em> <span class="call-sign">("Thunder")</span> — coordinates artillery units.</li>
-          <li><em>Lieutenant General Lila Chen</em> <span class="call-sign">("Supply Chain")</span> — manages supply chains and logistics.</li>
-        </ul>
+        <summary>Imperial Air Force Command Structure</summary>
+        <div class="card" style="margin-top:10px">
+          <p class="small-muted">Northern, Southern, Central, and Special Operations Air Commands manage air defense, strategic bombing, and rapid deployment forces.</p>
+        </div>
       </details>
 
       <details>
-        <summary><strong>Central Command</strong></summary>
-        <ul>
-          <li><strong><em>General Viktor Steele</em></strong> <span class="call-sign">("Bulwark")</span> — national logistics, reserves, homeland defense.</li>
-          <li><em>Lieutenant General Tobias Grant</em> <span class="call-sign">("Sentry")</span> — training and recruitment.</li>
-          <li><em>Lieutenant General Freya Carter</em> <span class="call-sign">("Forge")</span> — domestic garrisons oversight.</li>
-        </ul>
+        <summary>Imperial Navy Command Structure</summary>
+        <div class="card" style="margin-top:10px">
+          <p class="small-muted">Northern, Southern, and Central Fleet Commands handle surface and submarine warfare, amphibious operations, and port defense.</p>
+        </div>
       </details>
 
       <details>
-        <summary><strong>Eastern Command</strong></summary>
-        <ul>
-          <li><strong><em>General Helena Cross</em></strong> <span class="call-sign">("Shadow")</span> — mobility operations and border security specialist.</li>
-          <li><em>Lieutenant General Cedric Blake</em> <span class="call-sign">("Thunderbolt")</span> — cavalry and rapid-response units.</li>
-          <li><em>Lieutenant General Astrid Lane</em> <span class="call-sign">("Wraith")</span> — covert operations manager.</li>
-        </ul>
+        <summary>Special Operations Forces Command Structure</summary>
+        <div class="card" style="margin-top:10px">
+          <p class="small-muted">Special Operations Forces include Shadow Company, Steel Vipers, Ghost Team, and Phantom Corps with global rapid-response capability.</p>
+        </div>
       </details>
+    </section>
 
-      <h3>Imperial Air Force Command Structure</h3>
-      <details>
-        <summary><strong>Northern Air Command</strong></summary>
-        <p><strong><em>Air Marshal Dorian Wells</em></strong> <span class="call-sign">("Viper")</span> — air defense and cold-weather air ops.</p>
-      </details>
-      <details>
-        <summary><strong>Southern Air Command</strong></summary>
-        <p><strong><em>Air Marshal Elena North</em></strong> <span class="call-sign">("Hawk")</span> — strategic bombing and reconnaissance.</p>
-      </details>
-      <details>
-        <summary><strong>Central Air Command</strong></summary>
-        <p><strong><em>Air Marshal Victor Price</em></strong> <span class="call-sign">("Guardian")</span> — training, logistics, homeland air defense.</p>
-      </details>
-      <details>
-        <summary><strong>Special Operations Air Command</strong></summary>
-        <p><strong><em>Air Marshal Freya Knight</em></strong> <span class="call-sign">("Phantom")</span> — stealth and rapid-deployment missions.</p>
-      </details>
+    <!-- ASSETS -->
+    <section class="section" id="assets">
+      <div class="section-title"><h2>Major Assets</h2><span class="small-muted">Force composition across Army, Air Force, Navy, and Defensive Systems</span></div>
 
-      <h3>Imperial Navy Command Structure</h3>
-      <details>
-        <summary><strong>Northern Fleet Command</strong></summary>
-        <ul>
-          <li><strong><em>Admiral Cedric Frost</em></strong> <span class="call-sign">("Icebreaker")</span> — polar naval ops.</li>
-          <li><em>Vice Admiral Mira Frosttide</em> — commands Wavebreaker frigates.</li>
-        </ul>
-      </details>
-      <details>
-        <summary><strong>Southern Fleet Command</strong></summary>
-        <ul>
-          <li><strong><em>Admiral Kalista Reed</em></strong> <span class="call-sign">("Flare")</span> — warm-water engagements.</li>
-          <li><em>Vice Admiral Jarek Stormcurrent</em> — submarine operations.</li>
-        </ul>
-      </details>
-      <details>
-        <summary><strong>Central Naval Command</strong></summary>
-        <ul>
-          <li><strong><em>Admiral Magnus Hill</em></strong> <span class="call-sign">("Anchor")</span> — naval logistics and port management.</li>
-          <li><em>Vice Admiral Liora Tidemarch</em> — coastal defense and patrols.</li>
-        </ul>
-      </details>
-
-      <h3>Special Operations Forces Command Structure</h3>
-      <details>
-        <summary><strong>General Command</strong></summary>
-        <p><strong><em>Commander-In-Chief Cain Walker</em></strong> <span class="call-sign">("Specter")</span> — overall SOF leader.</p>
-      </details>
-      <details>
-        <summary><strong>Shadow Company Command</strong></summary>
-        <p><strong><em>Colonel Aria Hunter</em></strong> <span class="call-sign">("Shade")</span> — infiltration & sabotage specialist.</p>
-      </details>
-      <details>
-        <summary><strong>Steel Vipers Command</strong></summary>
-        <p><strong><em>Colonel Damian Cole</em></strong> <span class="call-sign">("Raptor")</span> — counter-terrorism & hostage rescue leader.</p>
-      </details>
-
-      <h2>Major Army Assets</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Asset</th><th>Type</th><th>Active Quantity</th><th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Imperial Infantry</td><td>Soldiers</td><td>1.56 Million</td>
-            <td>Highly mobile, modernized force designed for overseas intervention and precision ground operations.</td>
-          </tr>
-          <tr>
-            <td>Abrams X "The Whispering Death"</td><td>Main Battle Tank</td><td>750</td>
-            <td>Next-generation Thandorian main battle tank, designed for superior performance on the modern battlefield.</td>
-          </tr>
-          <tr>
-            <td>PT-91 "Twardy"</td><td>Main Battle Tank</td><td>4,000</td>
-            <td>Enhanced armor and hybrid propulsion system, superior survivability.</td>
-          </tr>
-          <tr>
-            <td>M-109A7 "Paladin"</td><td>Self-Propelled Howitzer</td><td>1,200</td>
-            <td>Advanced artillery with precision strike capabilities.</td>
-          </tr>
-          <tr>
-            <td>UH-60 "Black Hawk"</td><td>Utility Helicopter</td><td>700</td>
-            <td>Versatile transport for troops and supplies.</td>
-          </tr>
-          <tr>
-            <td>RQ-4 Global Hawk</td><td>Recon Drone</td><td>500</td>
-            <td>Long-range, high-altitude surveillance drone.</td>
-          </tr>
-          <tr>
-            <td>HEMTT (M977) "Long Haul"</td><td>Heavy Logistics Truck</td><td>1,600</td>
-            <td>Provides rapid troop and supply movement with large capacity.</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Imperial Anti-Air & Missile Defense</h2>
-      <table>
-        <thead>
-          <tr><th>Asset</th><th>Type</th><th>Active Quantity</th><th>Description</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>S-550 "Aegis Claw"</td><td>Long-Range Anti-Air System</td><td>180</td>
-            <td>Next-generation SAM capable of intercepting ICBMs, hypersonic targets, and stealth aircraft to ~600 km.</td>
-          </tr>
-          <tr>
-            <td>MIM-240 "Sentinel"</td><td>Medium-Range Air Defense</td><td>320</td>
-            <td>Mobile missile launcher for aircraft, drones, and cruise missiles; integrated radar & networked guidance.</td>
-          </tr>
-          <tr>
-            <td>SKYNET-X Drone Interceptor</td><td>Autonomous Counter-UAV</td><td>540</td>
-            <td>AI-driven interceptor drones with EM disruptors and rapid-fire autocannons for defending critical sites.</td>
-          </tr>
-          <tr>
-            <td>THAAMDS "Zephyr"</td><td>Terminal High-Altitude Air Defense</td><td>140</td>
-            <td>High-altitude interception of ballistic threats; deployed to shield major population & command centers.</td>
-          </tr>
-          <tr>
-            <td>"Guardian Eye" Radar Array</td><td>Early Warning Network</td><td>35</td>
-            <td>Nationwide radar grid detecting low-visibility and hypersonic projectiles; linked to the Imperial Defense Net (IDN).</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <h2>Imperial Air Force Assets</h2>
-      <table>
-        <thead>
-          <tr><th>Asset</th><th>Type</th><th>Active Quantity</th><th>Description</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>F-35 "Lightning II"</td><td>Stealth Fighter</td><td>250</td><td>Multi-role stealth fighter with advanced avionics.</td></tr>
-          <tr><td>B-2 "Spirit"</td><td>Strategic Bomber</td><td>70</td><td>Stealth bomber capable of delivering conventional and nuclear payloads.</td></tr>
-          <tr><td>Eurofighter Typhoon</td><td>Multirole Fighter</td><td>400</td><td>High-performance, all-weather fighter for air superiority.</td></tr>
-          <tr><td>MQ-9 Reaper</td><td>Combat Drone</td><td>150</td><td>Long-endurance drone with autonomous strike capabilities.</td></tr>
-          <tr><td>C-17 Globemaster III</td><td>Strategic Transport</td><td>22</td><td>Heavy-lift transport aircraft for rapid deployment.</td></tr>
-        </tbody>
-      </table>
-
-      <h2>Imperial Navy Assets</h2>
-      <table>
-        <thead>
-          <tr><th>Asset</th><th>Type</th><th>Active Quantity</th><th>Description</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Arleigh Burke-class DDG</td><td>Destroyer</td><td>30</td><td>Advanced missile systems for anti-air and anti-ship roles.</td></tr>
-          <tr><td>Wasp-class LHD</td><td>Amphibious Assault Ship</td><td>8</td><td>Capacity for troop deployment directly onto beaches.</td></tr>
-          <tr><td>Astute-class SSN</td><td>Attack Submarine</td><td>10</td><td>Advanced nuclear-powered attack submarines with stealth and sonar capabilities.</td></tr>
-          <tr><td>Mistral-class LHD</td><td>Landing Helicopter Dock</td><td>4</td><td>Deploys and supports rotary-wing aircraft in operations.</td></tr>
-          <tr><td>Type 45 Daring-class</td><td>Destroyer</td><td>10</td><td>Air-defense destroyer equipped with advanced radar and missile systems.</td></tr>
-          <tr><td>Nimitz Class</td><td>Aircraft Carrier</td><td>3</td><td>Nuclear-powered carrier capable of housing 60+ aircraft.</td></tr>
-        </tbody>
-      </table>
-
-      <h2>Strategic Weapons Command</h2>
-      <p><strong><em>Commander of Strategic Operations:</em></strong> General Corvin Rausch <span class="call-sign">("Overwatch")</span></p>
-      <p class="note">Oversees nuclear, intercontinental, and strategic deterrence systems; reports to Supreme Commander Adler for launch authorization.</p>
-
-      <table>
-        <thead><tr><th>Asset</th><th>Type</th><th>Active Quantity</th><th>Description</th></tr></thead>
-        <tbody>
-          <tr><td>ICBM "Leviathan" Mk-IV</td><td>Intercontinental Ballistic Missile</td><td>120</td><td>MIRV-capable ICBM with ~12,000 km range and hardened guidance.</td></tr>
-          <tr><td>SRBM "Falcon Strike"</td><td>Short-Range Ballistic Missile</td><td>650</td><td>Tactical nuclear & conventional capability; rapid-launch field deployment.</td></tr>
-          <tr><td>SLBM "Trident-X"</td><td>Sub-Launched Ballistic Missile</td><td>80</td><td>Deployed aboard Astute-class subs; low-yield or MIRV options.</td></tr>
-          <tr><td>AGM-302 "Solar Flare"</td><td>Air-Launched Cruise Missile</td><td>210</td><td>Stealth cruise missile deployable from B-2 and Typhoon, precision nuclear or EMP options.</td></tr>
-          <tr><td>Orbital Defense Platform "Atlas"</td><td>Kinetic & Laser Defense</td><td>6</td><td>Space-based network for intercepting hostile ICBMs and satellites. Classified targeting protocols.</td></tr>
-        </tbody>
-      </table>
-
-      <details class="classified">
-        <summary><strong>CLASSIFIED — Nuclear Stockpile (restricted)</strong></summary>
-        <table>
-          <thead>
-            <tr><th>Warhead Category</th><th>Yield Range</th><th>Quantity</th><th>Primary Delivery Platforms</th><th>Notes</th></tr>
-          </thead>
+      <div class="card">
+        <h3>Imperial Army Assets</h3>
+        <table class="asset-table">
+          <thead><tr><th>Asset</th><th>Type</th><th>Active Quantity</th><th>Description</th></tr></thead>
           <tbody>
-            <tr>
-              <td>Strategic Warheads</td>
-              <td>Hundreds of kilotons — multi-megaton (variable)</td>
-              <td>480</td>
-              <td>ICBM "Leviathan" Mk-IV, SLBM "Trident-X", B-2 / strategic air assets</td>
-              <td>Designed for long-range deterrence and MIRV capability.</td>
-            </tr>
-            <tr>
-              <td>Tactical Warheads</td>
-              <td>Sub-kiloton to tens of kilotons (variable)</td>
-              <td>230</td>
-              <td>SRBM "Falcon Strike", air-launched cruise missiles, mobile tactical launchers</td>
-              <td>Fieldable for battlefield use and limited strategic strikes.</td>
-            </tr>
-            <tr>
-              <td>Reserve / Training Warheads</td>
-              <td>Variable / inert trainers</td>
-              <td>50 (inert / reserve)</td>
-              <td>Maintenance depots, training ranges</td>
-              <td>Inert units for training and spares; not operationally deployed.</td>
-            </tr>
-            <tr>
-              <td><strong>Total Stockpile</strong></td><td>—</td><td><strong>760</strong></td><td>—</td><td><strong>Accounted strategic & tactical warheads plus reserves.</strong></td>
-            </tr>
+            <tr class="striped"><td>Imperial Infantry</td><td>Soldiers</td><td>1.56 Million</td><td>Highly mobile, modernized force for overseas intervention.</td></tr>
+            <tr><td>Abrams X "The Whispering Death"</td><td>Main Battle Tank</td><td>750</td><td>Next-generation main battle tank for modern battlefields.</td></tr>
+            <tr class="striped"><td>PT-91 "Twardy"</td><td>Main Battle Tank</td><td>4,000</td><td>Enhanced armor and hybrid propulsion system.</td></tr>
           </tbody>
         </table>
-        <p class="note"><strong>Nuclear Doctrine:</strong> <em>No First Use</em> unless national sovereignty or existence is directly threatened; strict command-and-control under Strategic Weapons Command.</p>
-      </details>
-
-      <h2>Detailed Asset Descriptions</h2>
-
-      <details>
-        <summary><strong>Abrams X "The Whispering Death" — Main Battle Tank</strong></summary>
-        <img class="float-left" src="https://s1.cdn.autoevolution.com/images/news/gallery/abrams-x-emerges-as-the-tank-of-the-future-youtube-video-shows-it-driving_11.jpg" alt="Abrams X tank">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 1,300 &nbsp;&nbsp; <strong>Stockpile:</strong> 550</p>
-        <p>The Abrams X is a next-generation Thandorian main battle tank combining composite/reactive armor, a 120 mm smoothbore cannon, advanced targeting systems and integrated battlefield management. Crew: 3. Max speed: 70 km/h. Weight: 60 tons. Range: ~500 km.</p>
-      </details>
-
-      <details>
-        <summary><strong>PT-91 "Twardy" — Main Battle Tank</strong></summary>
-        <img class="float-left" src="https://www.19fortyfive.com/wp-content/uploads/2022/04/PT-91-Twardy.jpg" alt="PT-91 Twardy">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 5,328 &nbsp;&nbsp; <strong>Stockpile:</strong> 1,328</p>
-        <p>Modernized MBT with 125 mm smoothbore, composite/reactive armor and hybrid propulsion. Crew: 3.</p>
-      </details>
-
-      <details>
-        <summary><strong>M-109A7 "Paladin" — Self-Propelled Howitzer</strong></summary>
-        <img class="float-left" src="https://th.bing.com/th/id/OIP.1WZqkZ-j4CAhOBoggG8aDAHaEb?w=297&h=180&c=7&r=0&o=5&pid=1.7" alt="M-109A7 Paladin">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 2,836 &nbsp;&nbsp; <strong>Stockpile:</strong> 1,636</p>
-        <p>155 mm automated howitzer with precision munitions capability and improved mobility and survivability.</p>
-      </details>
-
-      <details>
-        <summary><strong>UH-60 "Black Hawk" — Utility Helicopter</strong></summary>
-        <img class="float-left" src="https://th.bing.com/th/id/OIF.VdCJKFYZADnzdjAaueYSfQ?w=301&h=174&c=7&r=0&o=5&pid=1.7" alt="UH-60 Black Hawk">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 632 &nbsp;&nbsp; <strong>Stockpile:</strong> 332</p>
-        <p>Versatile transport helicopter for troops, supplies, MEDEVAC and light armed support; carries up to 11 troops.</p>
-      </details>
-
-      <details>
-        <summary><strong>RQ-4 Global Hawk — Recon Drone</strong></summary>
-        <img class="float-left" src="https://th.bing.com/th/id/OIP.BIalJZVDeTYQY7L-lK7r3QHaEo?w=277&h=180&c=7&r=0&o=5&pid=1.7" alt="RQ-4 Global Hawk">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 612 &nbsp;&nbsp; <strong>Stockpile:</strong> 112</p>
-        <p>High-altitude, long-endurance UAV with SAR, EO/IR sensors; >30 hours endurance and long-range ISR capability.</p>
-      </details>
-
-      <details>
-        <summary><strong>HEMTT (M977) "Long Haul" — Heavy Logistics Truck</strong></summary>
-        <img class="float-left" src="https://th.bing.com/th/id/OIP.LfME2E_mtZBJLHgjFwxQFAHaE7?w=252&h=180&c=7&r=0&o=5&pid=1.7" alt="HEMTT M977">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 5,428 &nbsp;&nbsp; <strong>Stockpile:</strong> 3,812</p>
-        <p>All-terrain logistics truck, carries ~13 tons of cargo; vital for rapid resupply in austere environments.</p>
-      </details>
-
-      <h2>Air Force — Select Platform Details</h2>
-      <details>
-        <summary><strong>F-35 "Lightning II"</strong></summary>
-        <img class="float-left" src="https://th.bing.com/th/id/OIP.ND96tnxZqgf8yDSWRIZ5egHaEr?w=261&h=180&c=7&r=0&o=5&pid=1.7" alt="F-35">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 424 &nbsp;&nbsp; <strong>Stockpile:</strong> 74</p>
-        <p>Family of stealth multirole fighters with advanced sensor fusion (AN/APG-81), low-observable design and multi-mission capability.</p>
-      </details>
-
-      <details>
-        <summary><strong>B-2 "Spirit"</strong></summary>
-        <img class="float-left" src="https://th.bing.com/th/id/OIP.24880a1jLNluXH6M0s_aFAHaE8?w=260&h=180&c=7&r=0&o=5&pid=1.7" alt="B-2 Spirit">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 82 &nbsp;&nbsp; <strong>Stockpile:</strong> 12</p>
-        <p>Stealth strategic bomber for deep penetration missions; carries conventional and nuclear payloads.</p>
-      </details>
-
-      <h2>Navy — Select Platform Details</h2>
-      <details>
-        <summary><strong>Arleigh Burke-class DDG</strong></summary>
-        <img class="float-left" src="https://th.bing.com/th/id/OIP.gZhPJIrenyP77ZkwleGvYAHaE7?w=282&h=188&c=7&r=0&o=5&pid=1.7" alt="Arleigh Burke">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 60 &nbsp;&nbsp; <strong>Stockpile:</strong> 30</p>
-        <p>Multi-role destroyer with Aegis combat system; anti-air, anti-ship and land-attack capabilities.</p>
-      </details>
-
-      <details>
-        <summary><strong>Nimitz-class Aircraft Carrier</strong></summary>
-        <img class="float-left" src="https://th.bing.com/th/id/OIP.cRwHek6IEKFE8vHJZgCcegAAAA?rs=1&pid=ImgDetMain" alt="Nimitz class">
-        <p class="asset-stats"><strong>Total Quantity:</strong> 3 &nbsp;&nbsp; <strong>Being Built:</strong> 1</p>
-        <p>Nuclear-powered supercarrier with flight deck for 60+ aircraft; central to carrier strike group power projection.</p>
-      </details>
-
-      <h2>Special Operations Forces — Units</h2>
-      <ul>
-        <li><strong>Ghost Team (Covert Operations)</strong> — infiltration, sabotage, stealth equipment and NVG ops.</li>
-        <li><strong>Shadow Legion (Counter-Terrorism)</strong> — urban warfare, hostage rescue, breaching tools.</li>
-        <li><strong>Phantom Corps (Maritime Operations)</strong> — naval sabotage and recon from subs or small boats.</li>
-        <li><strong>Titan Force (Heavy Assault)</strong> — rapid-response heavy assault utilizing armored transports.</li>
-        <li><strong>Recon Unit (Intelligence Gathering)</strong> — long-duration intel ops with advanced comms and surveillance gear.</li>
-      </ul>
-
-      <h2>Small Arms & Common Infantry Weapons</h2>
-      <details>
-        <summary><strong>HK416</strong></summary>
-        <p>Description: Modern modular 5.56x45mm assault rifle with short-stroke piston system. Stockpile: 570,000</p>
-      </details>
-      <details>
-        <summary><strong>FN SCAR-L</strong></summary>
-        <p>Description: Lightweight modular 5.56x45mm assault rifle. Stockpile: 500,000</p>
-      </details>
-      <details>
-        <summary><strong>M249 para</strong></summary>
-        <p>Description: 5.56x45mm belt-fed squad automatic weapon. Stockpile: 124,000</p>
-      </details>
-      <details>
-        <summary><strong>M4 with M320 Grenade Launcher</strong></summary>
-        <p>Description: M4 rifle with 40mm under-barrel launcher. Stockpile: 322,000</p>
-      </details>
-      <details>
-        <summary><strong>Mark 12 SPR (Special Purpose Rifle)</strong></summary>
-        <p>Description: Precision 5.56 rifle with advanced optics. Stockpile: 120,000</p>
-      </details>
-
-      <h2>Equipment Purchases & Imports</h2>
-      <details>
-        <summary><strong>Kamov Ka-52 Attack Helicopters</strong></summary>
-        <p><strong>Amount:</strong> 10 &nbsp; <strong>Bought from:</strong> Moryazvia &nbsp; <strong>Total Cost:</strong> 192,771,084.30 T♔M</p>
-        <p>Stats: 1 × 30 mm cannon (460 rds), crew 2, max speed 315 km/h, missiles: 12 AT, 4 AAM, range 545 km.</p>
-      </details>
-
-      <details>
-        <summary><strong>S-300 Missile System</strong></summary>
-        <p><strong>Amount:</strong> 2 &nbsp; <strong>Bought from:</strong> Moryazvia &nbsp; <strong>Total Cost:</strong> 542,168,674.70 T♔M</p>
-        <p>Operational range: ~300 km (platform specifics vary). Long-range SAM / anti-ballistic capability.</p>
-      </details>
-
-      <details>
-        <summary><strong>P-19 Radar Systems</strong></summary>
-        <p><strong>Amount:</strong> 5 &nbsp; <strong>Bought from:</strong> Moryazvia &nbsp; <strong>Total Cost:</strong> 16,867,469.90 T♔M</p>
-        <p>Range ~260 km, UHF surveillance / target acquisition radar.</p>
-      </details>
-
-      <details>
-        <summary><strong>2S12 Sani Mortars</strong></summary>
-        <p><strong>Amount:</strong> 100 &nbsp; <strong>Bought from:</strong> Moryazvia &nbsp; <strong>Total Cost:</strong> 16,265,060.00 T♔M</p>
-        <p>120 mm heavy mortar, effective range up to ~7.1 km, crew 6, rate of fire ~12 rpm.</p>
-      </details>
-
-      <p class="muted">If you want the page slimmer or want certain sections collapsed by default, tell me which sections to open/close and I’ll tweak the `details[open]` attributes or add anchor links for quick navigation.</p>
-
+      </div>
     </section>
+
+    <!-- STRATEGIC WEAPONS -->
+    <section class="section" id="strategic-weapons">
+      <div class="section-title"><h2>Strategic Weapons Command</h2><span class="small-muted">Deterrence & strategic systems</span></div>
+      <div class="card">
+        <p class="small-muted">Strategic Weapons Command manages ICBMs, SLBMs, air-launched weapons, and space-based defense. Launch authority is centralized under the Supreme Commander.</p>
+      </div>
+    </section>
+
+    <section class="section" id="special-procure">
+      <div class="section-title"><h2>Special Operations & Procurement</h2><span class="small-muted">Elite units and recent purchases</span></div>
+      <div class="card">
+        <h3>Special Operations Forces</h3>
+        <ul class="small-muted">
+          <li>Ghost Team — covert infiltration and sabotage</li>
+          <li>Shadow Legion — counter-terrorism and urban hostage rescue</li>
+          <li>Phantom Corps — maritime special operations</li>
+        </ul>
+      </div>
+    </section>
+
+    <p class="small-muted" style="margin-top:18px">Source: Thandorian Imperial Factbook — Military Directorate</p>
   </main>
 
-  <div id="site-footer"></div>
-  <script src="js/main.js"></script>
+  <footer>© 2025 Empire of Great Thandoria — Military Directorate</footer>
 </body>
 </html>
